@@ -1,0 +1,44 @@
+TNBC-GeneQuery Project Summary Report
+
+Introduction
+
+Triple-Negative Breast Cancer (TNBC) is an aggressive subtype characterized by the lack of ER, PR, and HER2 receptors, making it difficult to treat with targeted therapies. While The Cancer Genome Atlas (TCGA) provides a vast repository of genomic data for research, its complexity presents a significant barrier for non-bioinformaticians. This project, TNBC-GeneQuery, was developed to solve this problem by creating a streamlined Python tool that automates the entire process of data curation and analysis, making complex genomic data accessible through a single command.   
+
+Data Curation and Methods
+
+The project utilized RNA-Seq gene expression and clinical data from the TCGA Breast Cancer (TCGA-BRCA) cohort. The data was sourced from the UCSC Xena platform, chosen for its uniformly processed, analysis-ready datasets which minimize technical errors.
+
+A data pipeline (curate_data.py) was engineered to process the initial dataset of over 1,200 samples. This script programmatically filtered the samples to create two highly specific cohorts:
+
+A TNBC Cohort (N=116): Tumor samples confirmed to be ER-negative, PR-negative, and HER2-negative based on the clinical metadata.   
+
+A Normal Cohort (N=114): Samples explicitly labeled as "Solid Tissue Normal," providing a healthy baseline for comparison.   
+
+The resulting clean, log2-transformed expression data for these two cohorts were saved as tnbc_expression_log2.csv and normal_expression_log2.csv.   
+
+Tool Functionality and Output
+
+The main tool, tnbc_gene_query.py, is a command-line utility that automates the analysis. It takes an official gene symbol as input, loads the pre-curated data, and performs a differential expression analysis.
+
+The key outputs are:
+
+A Console Summary: Reports the average expression of the gene in both the TNBC and Normal cohorts.
+
+Log2 Fold Change (Log2FC): The primary statistical metric, calculated as the difference between the two average expression values. A positive value indicates upregulation in TNBC, while a negative value indicates downregulation.
+
+A Bar Plot Visualization: A publication-quality bar plot (e.g., BRCA1_expression_plot.png) is automatically saved, showing the mean expression levels and error bars for an immediate visual comparison.
+
+Results and Interpretation
+
+The tool was validated using key genes in breast cancer, yielding significant biological insights:
+
+BRCA1: The tool reported a Log2FC of +0.51, indicating higher average expression in TNBC tumors. This counter-intuitive result for a tumor suppressor is not an error but reflects a known biological phenomenon: BRCA1 expression is tightly linked to the cell cycle, and its upregulation is a marker of the high proliferation rate characteristic of TNBC.
+
+TP53: Showed a negligible Log2FC of -0.14. This finding correctly suggests that the primary mechanism for p53's role in TNBC is not a change in its expression level, but rather the high frequency of missense mutations that produce a non-functional protein.
+
+PIK3CA: Reported a Log2FC of -0.51, indicating a modest downregulation. This suggests that widespread overexpression of this oncogene is not a primary driving mechanism in the majority of this TNBC cohort, and its activation is likely driven by mutations in a smaller subset of patients.
+
+Conclusion and Significance
+
+TNBC-GeneQuery successfully transforms a complex, time-consuming bioinformatics task into a simple, rapid query. It serves as a powerful and accessible hypothesis-generation engine, enabling cancer researchers to instantly test ideas, validate lab findings against clinical data, and prioritize future experiments.
+
