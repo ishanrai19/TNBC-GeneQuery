@@ -6,9 +6,9 @@ Triple-Negative Breast Cancer (TNBC) is an aggressive subtype characterized by t
 
 Data Curation and Methods
 
-The project utilized RNA-Seq gene expression and clinical data from the TCGA Breast Cancer (TCGA-BRCA) cohort. The data was sourced from the UCSC Xena platform, chosen for its uniformly processed, analysis-ready datasets which minimize technical errors.
+The project utilized RNA-Seq gene expression and clinical data from the TCGA Breast Cancer (TCGA-BRCA) cohort. The data was sourced from the UCSC Xena platform, chosen for its uniformly processed, analysis-ready datasets, which minimize technical errors.
 
-A data pipeline (curate_data.py) was engineered to process the initial dataset of over 1,200 samples. This script programmatically filtered the samples to create two highly specific cohorts:
+A data pipeline (curate_data.py) was engineered to process the initial dataset of over 1,200 samples. This script programmatically filtered the samples to create two particular cohorts:
 
 A TNBC Cohort (N=116): Tumor samples confirmed to be ER-negative, PR-negative, and HER2-negative based on the clinical metadata.   
 
@@ -26,13 +26,13 @@ A Console Summary: Reports the average expression of the gene in both the TNBC a
 
 Log2 Fold Change (Log2FC): The primary statistical metric, calculated as the difference between the two average expression values. A positive value indicates upregulation in TNBC, while a negative value indicates downregulation.
 
-A Bar Plot Visualization: A publication-quality bar plot (e.g., BRCA1_expression_plot.png) is automatically saved, showing the mean expression levels and error bars for an immediate visual comparison.
+A Bar Plot Visualization: A publication-quality bar plot (e.g., BRCA1_expression_plot.png) is automatically generated, displaying the mean expression levels and error bars for immediate visual comparison.
 
 Results and Interpretation
 
 The tool was validated using key genes in breast cancer, yielding significant biological insights:
 
-BRCA1: The tool reported a Log2FC of +0.51, indicating higher average expression in TNBC tumors. This counter-intuitive result for a tumor suppressor is not an error but reflects a known biological phenomenon: BRCA1 expression is tightly linked to the cell cycle, and its upregulation is a marker of the high proliferation rate characteristic of TNBC.
+BRCA1: The tool reported a Log2FC of +0.51, indicating higher average expression in TNBC tumors. This counter intuitive result for a tumor suppressor is not an error but reflects a known biological phenomenon: BRCA1 expression is tightly linked to the cell cycle, and its upregulation is a marker of the high proliferation rate characteristic of TNBC.
 
 TP53: Showed a negligible Log2FC of -0.14. This finding correctly suggests that the primary mechanism for p53's role in TNBC is not a change in its expression level, but rather the high frequency of missense mutations that produce a non-functional protein.
 
