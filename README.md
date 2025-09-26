@@ -29,7 +29,7 @@ Before using the tool, you must download the source data from the UCSC Xena plat
 
 **Step 1: Download Data**
 
-Go to the(https://xenabrowser.net/datapages/?cohort=TCGA%20Breast%20Cancer%20(BRCA)&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443) and download the following three files into your `TNBC-GeneQuery` directory:
+Go to this link: (https://xenabrowser.net/datapages/?cohort=TCGA%20Breast%20Cancer%20(BRCA)&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443) and download the following three files into your `TNBC-GeneQuery` directory:
 
 1.  **Gene Expression:** From the `gene expression RNAseq` section, download `IlluminaHiSeq*`.
 2.  **Clinical Data:** From the `phenotype` section, download `Phenotypes`.
