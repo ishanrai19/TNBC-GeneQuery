@@ -1,4 +1,3 @@
-# TNBC-GeneQuery
 # TNBC-GeneQuery: A Transcriptomic Analysis Tool
 
 A command-line tool to automate the analysis of gene expression differences between Triple-Negative Breast Cancer (TNBC) and normal tissue using data from The Cancer Genome Atlas (TCGA).
