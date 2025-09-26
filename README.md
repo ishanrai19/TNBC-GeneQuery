@@ -3,10 +3,11 @@
 A command-line tool to automate the analysis of gene expression differences between Triple-Negative Breast Cancer (TNBC) and normal tissue using data from The Cancer Genome Atlas (TCGA).
 
 Prerequisites
+```bash
 Python (version 3.8 or newer)
 git
-
-1. Installation
+```
+## 1. Installation
 First, clone the repository and install the necessary Python libraries.bash
 
 Clone this repository to your local machine
