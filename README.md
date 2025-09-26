@@ -3,22 +3,25 @@
 A command-line tool to automate the analysis of gene expression differences between Triple-Negative Breast Cancer (TNBC) and normal tissue using data from The Cancer Genome Atlas (TCGA).
 
 Prerequisites
-```bash
+```
 Python (version 3.8 or newer)
 git
 ```
 ## 1. Installation
-First, clone the repository and install the necessary Python libraries.bash
+First, clone the repository and install the necessary Python libraries.
 
 Clone this repository to your local machine
+```
 git clone <your-repository-url>
-
+```
 Navigate into the project directory
+```
 cd TNBC-GeneQuery
-
+```
 Install the required Python packages
+```
 pip install -r requirements.txt
-
+```
 
 ## 2. One-Time Data Setup
 
@@ -36,7 +39,7 @@ Go to the(https://xenabrowser.net/datapages/?cohort=TCGA%20Breast%20Cancer%20(BR
 
 Run the `curate_data.py` script from your terminal. This will process the large files and create the clean datasets needed for the analysis tool.
 
-```bash
+```
 python curate_data.py
 ```
 This will create a data/ directory containing tnbc_expression_log2.csv and normal_expression_log2.csv.
