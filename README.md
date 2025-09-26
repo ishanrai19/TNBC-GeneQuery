@@ -38,21 +38,25 @@ Run the `curate_data.py` script from your terminal. This will process the large 
 
 ```bash
 python curate_data.py
+```
 This will create a data/ directory containing tnbc_expression_log2.csv and normal_expression_log2.csv.
 
 3. How to Run the Tool
 Once the data setup is complete, you can query any gene using the tnbc_gene_query.py script with the --gene flag.
 
 Syntax:
+```
 python tnbc_gene_query.py --gene <GENE_SYMBOL>
+```
 Example:
+```
 python tnbc_gene_query.py --gene BRCA1
-
+```
 4. Example Output
 Running the command for the gene BRCA1 will produce the following output in your terminal and save a plot to your directory.
 
 Console Output:
-
+```
 --- TNBC Gene Expression Explorer ---
 Gene Queried: BRCA1
 Average Expression (TNBC): 8.13 (log2 scale)
@@ -60,3 +64,4 @@ Average Expression (Normal): 7.62 (log2 scale)
 Log2 Fold Change (TNBC/Normal): 0.51
 
 Visualization saved to: BRCA1_expression_plot.png
+```
